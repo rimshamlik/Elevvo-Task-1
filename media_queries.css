@@ -1,0 +1,48 @@
+@media(max-width: 1200px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    #navbar {
+        width: 80%;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left: 95px;
+    }
+
+    .nav-links {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width: 800px) {
+    #navbar {
+        width: 80%;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left: 65px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    #navbar {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+}

@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid black; */
+}
+
+/* Section # 1 */
+
+.background_img {
+    height: 100vh;
+    background-image: url(images/Back\ img.jpg);
+    border-image-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#navbar {
+    background: rgba(44, 118, 71, 0.516);
+    box-shadow: 4px 5px 13px 8px rgba(29, 58, 40, 0.516);
+    height: 100px;
+    width: 85%;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: 200px;
+}
+
+.nav-links {
+    width: 60%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.toggle-btn {
+    font-size: 35px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.nav-links .fa-solid,
+.side_bar .fa-solid {
+    color: orange;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+
+.nav-links li,
+.side_bar li {
+    position: relative;
+}
+
+.nav-links li::after,
+.side_bar li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -1px;
+    border: 2px solid rgba(29, 33, 27, 0.72);
+    border-radius: 50px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    transform: scalex(0);
+}
+
+.nav-links li:hover::after {
+    transform: scalex(1);
+}
+
+.nav-links li a,
+.side_bar li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: orange;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+/* Side Bar */
+.side_bar {
+    background: rgba(44, 118, 71, 0.516);
+    backdrop-filter: blur(7px);
+    width: 300px;
+    height: 100vh;
+    z-index: 999;
+    list-style: none;
+    box-shadow: -10px 0px 15px 10px rgba(32, 57, 41, 0.295);
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.5s ease-in-out;
+}
+
+.side_bar.active {
+    right: 0;
+}
+
+.side_bar li {
+    width: 40%;
+    height: 30px;
+    margin: 65px 0px 10px 0px;
+    display: inline-block;
+}
+
+.side_bar li::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: -2px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    transform: scalex(0);
+}
+
+.side_bar li:hover::after {
+    transform: scalex(0.6);
+}
+
+.side_bar li a {
+    display: flex;
+    justify-content: center;
+}
+
+.side_bar .fa-xmark {
+    position: relative;
+    top: 30px;
+    left: 45px;
+    cursor: pointer;
+    font-size: 35px;
+    color: black;
+}
