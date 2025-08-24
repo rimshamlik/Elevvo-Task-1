@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Elvvo Task#1 </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="media_queries.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Festive&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Section # 1 -->
+        <section class="image-fluid background_img">
+            <div id="navbar">
+                <div class="logo">
+                    <img src="https://elevvo.tech/assets/nav_logo-5vkEKoZL.svg" alt="Logo">
+                    
+                </div>
+                <ul class="nav-links">
+                    <li class="hideOnMobile">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <i class="fa-solid fa-people-group"></i>
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <i class="fa-solid fa-gears"></i>
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="#">Contact us</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <a href="#">Sign in</a>
+                    </li>
+                    
+                </ul>
+                <ul onclick="showSideBar()">
+                        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+                    </ul>
+            </div>
+        </section>
+    </header>
+
+    <!-- Section # 2 -->
+    <div id="navbar2">
+        <ul class="side_bar">
+            <i onclick="hideSideBar()" class="fa-solid fa-xmark"></i>
+
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-people-group"></i>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-gears"></i>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#">Contact us</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-arrow-down"></i>
+                <a href="#">Sign in</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.side_bar').classList.add('active');
+        }
+        function hideSideBar() {
+            const sidebar = document.querySelector('.side_bar').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
